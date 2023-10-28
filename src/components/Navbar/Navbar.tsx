@@ -11,9 +11,6 @@ const Navbar = ({ onNavbar }: IProps) => (
         <h3 className="hidden text-xl font-bold">Довідники</h3>
         <ul className="flex flex-col w-full items-center mt-7">
           <li className="py-4 px-6 font-[500] uppercase">
-            <a href="#">організації</a>
-          </li>
-          <li className="py-4 px-6 font-[500] uppercase">
             <a href="#">контрагенти</a>
           </li>
           <li className="py-4 px-6 font-[500] uppercase">
