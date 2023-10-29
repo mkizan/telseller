@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "code": 1,
+      "id": 1,
       "title": "Фен Babyliss Pro Caruso (2400W) (BAB6520RE)",
       "state": "Новий",
       "quantity": 4,
@@ -16,17 +16,17 @@
   ],
   "organizations": [
     {
-      "code": 1,
+      "id": 1,
       "prefix": "PK",
       "title": "ПП"
     },
     {
-      "code": 2,
+      "id": 2,
       "prefix": "KA",
       "title": "ФОП Кізан А.З."
     },
     {
-      "code": 3,
+      "id": 3,
       "prefix": "KН",
       "title": "ФОП Кізан Н.В."
     }

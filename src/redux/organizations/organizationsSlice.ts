@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getOrganizationsThunk } from "./operations";
 
 interface IOrganization {
-  code: number;
+  id: number;
   prefix: string;
   title: string;
 }

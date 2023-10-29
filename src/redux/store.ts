@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { organizationsReducer } from "./organizations/organizationsSlice";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     organizations: organizationsReducer,
   },
