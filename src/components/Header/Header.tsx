@@ -1,10 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Navbar from "../Navbar";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import {
+  navbarSelector,
+  setToggleNavbar,
+} from "../../redux/navbar/navbarSlice";
 
 const Header = () => {
-  const [toggleNavbar, setToggleNavbar] = useState(false);
-
-  const handleClickHidden = () => setToggleNavbar(!toggleNavbar);
+  // const [toggleNavbar, setToggleNavbar] = useState(false);
+  // const handleClickHidden = () => setToggleNavbar(!toggleNavbar);
+  const dispatch = useAppDispatch();
+  const { toggleNavbar } = useAppSelector(navbarSelector);
 
   return (
     <>
@@ -12,7 +18,8 @@ const Header = () => {
         <button
           type="button"
           className="inline-flex mr-5"
-          onClick={handleClickHidden}
+          // onClick={handleClickHidden}
+          onClick={() => dispatch(setToggleNavbar(!toggleNavbar))}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +36,7 @@ const Header = () => {
             />
           </svg>
         </button>
-        <h1 className="text-primary font-bold">R-Agent</h1>
+        <h1 className="text-primary font-bold">TelSeller</h1>
         <button type="button" className="inline-flex ml-auto">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +53,8 @@ const Header = () => {
             />
           </svg>
         </button>
-        {toggleNavbar && <Navbar onNavbar={handleClickHidden} />}
+        {/* {toggleNavbar && <Navbar onNavbar={handleClickHidden} />} */}
+        {toggleNavbar && <Navbar />}
       </header>
     </>
   );

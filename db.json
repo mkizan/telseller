@@ -1,17 +1,19 @@
 {
-  "products": [
+  "referenceDirectoriesList": [
     {
       "id": 1,
-      "title": "Фен Babyliss Pro Caruso (2400W) (BAB6520RE)",
-      "state": "Новий",
-      "quantity": 4,
-      "price": {
-        "salon": 1857,
-        "market": 1950
-      },
-      "img": "url",
-      "manufacturer": "Babyliss",
-      "barcode": "3030050045994"
+      "title": "Організації",
+      "route": "organizations"
+    },
+    {
+      "id": 2,
+      "title": "Контрагенти",
+      "route": "customers"
+    },
+    {
+      "id": 3,
+      "title": "Номенклатура",
+      "route": "products"
     }
   ],
   "organizations": [
@@ -22,13 +24,48 @@
     },
     {
       "id": 2,
-      "prefix": "KA",
-      "title": "ФОП Кізан А.З."
+      "prefix": "ЕР",
+      "title": "ФОП Ернесто"
     },
     {
       "id": 3,
-      "prefix": "KН",
-      "title": "ФОП Кізан Н.В."
+      "prefix": "ЕН",
+      "title": "ФОП Ернесто"
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Мангус Зоряна",
+      "code": "2609236790",
+      "group": "Каскад",
+      "organization": "ПП",
+      "contract": {},
+      "debt": 150,
+      "contacts": {
+        "address": {
+          "street": "Миколайчука",
+          "build": 6,
+          "city": "Івано-Франківськ",
+          "phone": "0663230879",
+          "phone2": "0965428698"
+        }
+      }
+    }
+  ],
+  "productCatalog": [
+    {
+      "id": 1,
+      "title": "Фен Babyliss Pro Caruso (2400W) (BAB6520RE)",
+      "status": "Новий",
+      "quantity": 4,
+      "price": {
+        "salon": 1857,
+        "retail": 1950
+      },
+      "img": "url",
+      "manufacturer": "Babyliss",
+      "barcode": "3030050045994"
     }
   ]
 }

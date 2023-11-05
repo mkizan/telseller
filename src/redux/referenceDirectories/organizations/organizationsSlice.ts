@@ -1,5 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getOrganizationsThunk } from "./operations";
+import { RootState } from "../../store";
 
 interface IOrganization {
   id: number;
@@ -44,3 +45,4 @@ const organizationsSlice = createSlice({
 });
 
 export const organizationsReducer = organizationsSlice.reducer;
+export const organizationsSelector = (state: RootState) => state.organizations;

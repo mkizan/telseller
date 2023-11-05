@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getOrganizations } from "../../api/organizationsApi";
+import { getOrganizations } from "../../../api/organizationsAPI";
 
 export const getOrganizationsThunk = createAsyncThunk(
-  "oranizations/get",
+  "organizations/get",
   async () => await getOrganizations()
 );
