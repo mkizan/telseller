@@ -2,7 +2,7 @@
 // import { MdOutlinePeopleAlt } from "react-icons/md";
 import { referenceDirectoriesListSelector } from "../../redux/referenceDirectories/referenceDirectoriesList/referenceDirectoriesListSlice";
 import { useAppSelector } from "../../redux/hooks";
-import ReferenceDirectoriesListItem from "../referenceDirectoriesListItem";
+import ReferenceDirectoriesListItem from "../ReferenceDirectoriesListItem";
 
 const ReferenceDirectoriesList = () => {
   const { referenceDirectoriesList } = useAppSelector(
