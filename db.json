@@ -38,19 +38,31 @@
       "id": 1,
       "name": "Мангус Зоряна",
       "code": "2609236790",
-      "group": "Каскад",
+      "group": {
+        "id": 1,
+        "title": "Каскад"
+      },
       "organization": "ПП",
       "contract": {},
       "debt": 150,
-      "contacts": {
-        "address": {
-          "street": "Миколайчука",
-          "build": 6,
-          "city": "Івано-Франківськ",
-          "phone": "0663230879",
-          "phone2": "0965428698"
+      "contacts": [
+        {
+          "address": {
+            "street": "Миколайчука",
+            "build": 6,
+            "city": "Івано-Франківськ"
+          },
+          "addressDelivery": {
+            "street": "Миколайчука",
+            "build": 6,
+            "city": "Івано-Франківськ"
+          },
+          "phoneNumbers": {
+            "Work": "0663230879",
+            "Personal": "0965428698"
+          }
         }
-      }
+      ]
     }
   ],
   "productCatalog": [

@@ -1,8 +1,8 @@
-import OrganizationList from "../../OrganizationList";
+import OrganizationsList from "../../OrganizationsList";
 
 const OrganizationsPage = () => (
   <main>
-    <OrganizationList />
+    <OrganizationsList />
   </main>
 );
 

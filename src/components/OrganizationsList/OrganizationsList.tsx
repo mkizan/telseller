@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { organizationsSelector } from "../../redux/referenceDirectories/organizations/organizationsSlice";
 import { getOrganizationsThunk } from "../../redux/referenceDirectories/organizations/operations";
-import OrganizationListItem from "../OrganizationListItem";
+import OrganizationsListItem from "../OrganizationsListItem";
 import { Link } from "react-router-dom";
 
-const OrganizationList = () => {
+const OrganizationsList = () => {
   const { organizations } = useAppSelector(organizationsSelector);
   const dispatch = useAppDispatch();
 
@@ -28,7 +28,7 @@ const OrganizationList = () => {
         <tbody>
           {organizations.map((organization) => (
             <tr key={organization.id}>
-              <OrganizationListItem
+              <OrganizationsListItem
                 prefix={organization.prefix}
                 title={organization.title}
               />
@@ -40,4 +40,4 @@ const OrganizationList = () => {
   );
 };
 
-export default OrganizationList;
+export default OrganizationsList;

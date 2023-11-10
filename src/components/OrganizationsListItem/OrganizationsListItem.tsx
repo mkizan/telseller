@@ -3,11 +3,11 @@ type TProps = {
   title: string;
 };
 
-const OrganizationListItem = ({ prefix, title }: TProps) => (
+const OrganizationsListItem = ({ prefix, title }: TProps) => (
   <>
     <td>{prefix}</td>
     <td>{title}</td>
   </>
 );
 
-export default OrganizationListItem;
+export default OrganizationsListItem;
