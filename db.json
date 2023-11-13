@@ -37,7 +37,7 @@
     {
       "id": 1,
       "name": "Мангус Зоряна",
-      "code": "2609236790",
+      "code": 2609236790,
       "group": {
         "id": 1,
         "title": "Каскад"
@@ -55,6 +55,36 @@
           "addressDelivery": {
             "street": "Миколайчука",
             "build": 6,
+            "city": "Івано-Франківськ"
+          },
+          "phoneNumbers": {
+            "work": "0663230879",
+            "personal": "0965428698"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Микит Василь",
+      "code": "2609234312",
+      "group": {
+        "id": 2,
+        "title": "Каскад"
+      },
+      "organization": "ПП",
+      "contract": {},
+      "debt": 150,
+      "contacts": [
+        {
+          "address": {
+            "street": "Миколайчука",
+            "build": 7,
+            "city": "Івано-Франківськ"
+          },
+          "addressDelivery": {
+            "street": "Миколайчука",
+            "build": 7,
             "city": "Івано-Франківськ"
           },
           "phoneNumbers": {
