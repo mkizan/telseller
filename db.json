@@ -45,29 +45,24 @@
       "organization": "ПП",
       "contract": {},
       "debt": 150,
-      "contacts": [
-        {
-          "address": {
-            "street": "Миколайчука",
-            "build": 6,
-            "city": "Івано-Франківськ"
-          },
-          "addressDelivery": {
-            "street": "Миколайчука",
-            "build": 6,
-            "city": "Івано-Франківськ"
-          },
-          "phoneNumbers": {
-            "work": "0663230879",
-            "personal": "0965428698"
-          }
+      "contacts": {
+        "id": 1,
+        "address": {
+          "street": "Миколайчука",
+          "build": 6,
+          "city": "Івано-Франківськ"
+        },
+        "phoneNumbers": {
+          "personal": "0965428699",
+          "work": "0663230870"
         }
-      ]
+      },
+      "comment": ""
     },
     {
       "id": 2,
       "name": "Микит Василь",
-      "code": "2609234312",
+      "code": 2609234312,
       "group": {
         "id": 2,
         "title": "Каскад"
@@ -75,24 +70,19 @@
       "organization": "ПП",
       "contract": {},
       "debt": 150,
-      "contacts": [
-        {
-          "address": {
-            "street": "Миколайчука",
-            "build": 7,
-            "city": "Івано-Франківськ"
-          },
-          "addressDelivery": {
-            "street": "Миколайчука",
-            "build": 7,
-            "city": "Івано-Франківськ"
-          },
-          "phoneNumbers": {
-            "Work": "0663230879",
-            "Personal": "0965428698"
-          }
+      "contacts": {
+        "id": 1,
+        "address": {
+          "street": "Миколайчука",
+          "build": 7,
+          "city": "Івано-Франківськ"
+        },
+        "phoneNumbers": {
+          "Personal": "096542869",
+          "Work": "0663230879"
         }
-      ]
+      },
+      "comment": ""
     }
   ],
   "productCatalog": [
