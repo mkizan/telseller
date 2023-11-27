@@ -13,7 +13,7 @@ export const getSomeCustomer = async (id: number) => {
   return response.data;
 };
 
-export const createNewCustomer = async (data: TCustomerData) => {
+export const addNewCustomer = async (data: TCustomerData) => {
   const response = await axios.post("customers", data);
   return response.data;
 };

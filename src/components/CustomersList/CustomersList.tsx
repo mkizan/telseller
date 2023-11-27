@@ -14,27 +14,25 @@ const CustomersList = () => {
 
   return (
     <div className="relative h-full">
-      <button type="button" className="px-3 py-1 font-bold border mb-2">
-        <Link to="../">Back</Link>
-      </button>
+      <Link to="../" className="inline-block px-3 py-1 font-bold border mb-2">
+        Back
+      </Link>
       <ul>
         {customers.map((customer) => (
           <li key={customer.id}>
             <Link to={`../customer/${customer.id}`}>{customer.name}</Link>
             <p>
-              {customer.contacts?.address?.city},{" "}
-              {customer.contacts?.address?.street},{" "}
-              {customer.contacts?.address?.build}
+              {customer?.city}, {customer?.street}, {customer?.build}
             </p>
           </li>
         ))}
       </ul>
-      <button
-        type="button"
+      <Link
+        to="/customer/create"
         className="absolute inline-block bottom-0 right-0 px-4 py-2 rounded-[50%] bg-bgPrimary text-primary font-bold"
       >
         +
-      </button>
+      </Link>
     </div>
   );
 };

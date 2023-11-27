@@ -25,7 +25,7 @@
     {
       "id": 2,
       "prefix": "ЕР",
-      "title": "ФОП Ернесто"
+      "title": "ФОП Краса"
     },
     {
       "id": 3,
@@ -38,51 +38,59 @@
       "id": 1,
       "name": "Мангус Зоряна",
       "code": 2609236790,
-      "group": {
-        "id": 1,
-        "title": "Каскад"
-      },
+      "group": "Каскад",
       "organization": "ПП",
-      "contract": {},
+      "contract": [],
       "debt": 150,
-      "contacts": {
-        "id": 1,
-        "address": {
-          "street": "Миколайчука",
-          "build": 6,
-          "city": "Івано-Франківськ"
-        },
-        "phoneNumbers": {
-          "personal": "0965428699",
-          "work": "0663230870"
-        }
-      },
+      "personalPhoneNumber": "+380965428699",
+      "workPhoneNumber": "+380663230870",
+      "street": "Миколайчука",
+      "build": 6,
+      "city": "Івано-Франківськ",
       "comment": ""
     },
     {
       "id": 2,
       "name": "Микит Василь",
       "code": 2609234312,
-      "group": {
-        "id": 2,
-        "title": "Каскад"
-      },
+      "group": "Каскад",
       "organization": "ПП",
       "contract": {},
-      "debt": 150,
-      "contacts": {
-        "id": 1,
-        "address": {
-          "street": "Миколайчука",
-          "build": 7,
-          "city": "Івано-Франківськ"
-        },
-        "phoneNumbers": {
-          "Personal": "096542869",
-          "Work": "0663230879"
-        }
-      },
+      "debt": 100,
+      "personalPhoneNumber": "+380965421234",
+      "workPhoneNumber": "+380663230871",
+      "street": "Миколайчука",
+      "build": 7,
+      "city": "Івано-Франківськ",
       "comment": ""
+    },
+    {
+      "name": "Микола",
+      "code": "3302323212",
+      "organization": "ФОП",
+      "contract": "фвфвфв",
+      "debt": "0",
+      "city": "",
+      "street": "",
+      "build": "",
+      "personalPhoneNumber": "1231231231",
+      "workPhoneNumber": "",
+      "comment": "",
+      "id": 3
+    },
+    {
+      "name": "Beauty Club - IF",
+      "code": "",
+      "organization": "ПП",
+      "contract": "some contract",
+      "debt": "0",
+      "city": "",
+      "street": "",
+      "build": "",
+      "personalPhoneNumber": "380951234567",
+      "workPhoneNumber": "",
+      "comment": "",
+      "id": 4
     }
   ],
   "productCatalog": [

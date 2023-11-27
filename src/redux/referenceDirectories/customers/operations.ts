@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import {
-  createNewCustomer,
+  addNewCustomer,
   getCustomers,
   getSomeCustomer,
 } from "../../../api/customersAPI";
@@ -16,7 +16,7 @@ export const getCustomerThunk = createAsyncThunk(
   async (id: number) => await getSomeCustomer(id)
 );
 
-export const createNewCustomerThunk = createAsyncThunk(
-  "customers/create",
-  async (data: TCustomerData) => await createNewCustomer(data)
+export const addNewCustomerThunk = createAsyncThunk(
+  "customers/add",
+  async (data: TCustomerData) => await addNewCustomer(data)
 );

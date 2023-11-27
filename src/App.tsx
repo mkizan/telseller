@@ -5,6 +5,7 @@ import Home from "./components/pages/Home";
 import OrganizationsPage from "./components/pages/OrganizationsPage/OrganizationsPage";
 import CustomersList from "./components/CustomersList";
 import CustomersListItem from "./components/CustomersListItem";
+import NewCustomer from "./components/NewCustomer";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="organizations" element={<OrganizationsPage />} />
         <Route path="customers" element={<CustomersList />} />
         <Route path="customer/:id" element={<CustomersListItem />} />
+        <Route path="customer/create" element={<NewCustomer />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>

@@ -6,9 +6,9 @@ const CustomersListItem = () => {
   // const { register, handleSubmit, reset } = useForm();
   return (
     <>
-      <button type="button" className="px-3 py-1 font-bold border mb-2">
-        <Link to="../customers">Back</Link>
-      </button>
+      <Link to="../customers" className="px-3 py-1 font-bold border mb-2">
+        Back
+      </Link>
       <Tabs defaultFocus={true} className="">
         <TabList className="flex justify-around">
           <Tab className="focus:bg-accent focus:text-primary focus:font-bold border-solid border-2 border-bgMain w-full text-center">
