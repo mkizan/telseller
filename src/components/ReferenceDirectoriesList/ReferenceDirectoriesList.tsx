@@ -1,6 +1,6 @@
 // import { FiShoppingBag } from "react-icons/fi";
 // import { MdOutlinePeopleAlt } from "react-icons/md";
-import { referenceDirectoriesListSelector } from "../../redux/referenceDirectories/referenceDirectoriesList/referenceDirectoriesListSlice";
+import { referenceDirectoriesListSelector } from "../../redux/referenceDirectoriesList/referenceDirectoriesListSlice";
 import { useAppSelector } from "../../redux/hooks";
 import ReferenceDirectoriesListItem from "../ReferenceDirectoriesListItem";
 

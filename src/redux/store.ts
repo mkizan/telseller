@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { organizationsReducer } from "./referenceDirectories/organizations/organizationsSlice";
-import { referenceDirectoriesListReducer } from "./referenceDirectories/referenceDirectoriesList/referenceDirectoriesListSlice";
+import { organizationsReducer } from "./organizations/organizationsSlice";
+import { referenceDirectoriesListReducer } from "./referenceDirectoriesList/referenceDirectoriesListSlice";
 import { navbarReducer } from "./navbar/navbarSlice";
-import { customersReducer } from "./referenceDirectories/customers/customersSlice";
+import { customersReducer } from "./customers/customersSlice";
 
 export const store = configureStore({
   reducer: {

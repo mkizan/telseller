@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 // import type { FieldValues } from "react-hook-form";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { addNewCustomerThunk } from "../../redux/referenceDirectories/customers/operations";
+import { addNewCustomerThunk } from "../../redux/customers/operations";
 import { TCustomerData } from "../../types/CustomerData";
-import { organizationsSelector } from "../../redux/referenceDirectories/organizations/organizationsSlice";
+import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
 import { useEffect } from "react";
-import { getOrganizationsThunk } from "../../redux/referenceDirectories/organizations/operations";
+import { getOrganizationsThunk } from "../../redux/organizations/operations";
 
 const NewCustomer = () => {
   const {
@@ -24,7 +24,6 @@ const NewCustomer = () => {
   }, [dispatch]);
 
   const onSubmit = (data: TCustomerData) => {
-    // console.table(data);
     dispatch(addNewCustomerThunk(data));
     reset();
   };

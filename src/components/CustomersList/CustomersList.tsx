@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { customersSelector } from "../../redux/referenceDirectories/customers/customersSlice";
+import { customersSelector } from "../../redux/customers/customersSlice";
 import { useEffect } from "react";
-import { getCustomersThunk } from "../../redux/referenceDirectories/customers/operations";
+import { getCustomersThunk } from "../../redux/customers/operations";
 
 const CustomersList = () => {
   const { customers } = useAppSelector(customersSelector);

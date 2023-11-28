@@ -1,6 +1,6 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { getOrganizationsThunk } from "./operations";
-import { RootState } from "../../store";
+import { RootState } from "../store";
 
 interface IOrganization {
   id: number;

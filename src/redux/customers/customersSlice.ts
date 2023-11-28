@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addNewCustomerThunk, getCustomersThunk } from "./operations";
 import { initialState } from "./initialState";
-import { RootState } from "../../store";
+import { RootState } from "../store";
 
 export const customersSlice = createSlice({
   name: "customers",

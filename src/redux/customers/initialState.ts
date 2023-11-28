@@ -1,4 +1,4 @@
-import { TCustomerData } from "../../../types/CustomerData";
+import { TCustomerData } from "../../types/CustomerData";
 
 type TCustomersInitialState = {
   isLoading: boolean;

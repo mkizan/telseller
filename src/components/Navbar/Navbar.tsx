@@ -3,8 +3,8 @@
 // import { MdOutlinePeopleAlt } from "react-icons/md";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { referenceDirectoriesListSelector } from "../../redux/referenceDirectories/referenceDirectoriesList/referenceDirectoriesListSlice";
-import { referenceDirectoriesListThunk } from "../../redux/referenceDirectories/referenceDirectoriesList/operations";
+import { referenceDirectoriesListSelector } from "../../redux/referenceDirectoriesList/referenceDirectoriesListSlice";
+import { referenceDirectoriesListThunk } from "../../redux/referenceDirectoriesList/operations";
 import ReferenceDirectoriesList from "../ReferenceDirectoriesList";
 import {
   navbarSelector,

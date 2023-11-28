@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { organizationsSelector } from "../../redux/referenceDirectories/organizations/organizationsSlice";
-import { getOrganizationsThunk } from "../../redux/referenceDirectories/organizations/operations";
+import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
+import { getOrganizationsThunk } from "../../redux/organizations/operations";
 import OrganizationsListItem from "../OrganizationsListItem";
 import { Link } from "react-router-dom";
 
