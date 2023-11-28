@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 // import type { FieldValues } from "react-hook-form";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { addNewCustomerThunk } from "../../redux/customers/operations";
-import { TCustomerData } from "../../types/CustomerData";
+import { TCustomerData } from "../../redux/types/CustomerData";
 import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
 import { useEffect } from "react";
 import { getOrganizationsThunk } from "../../redux/organizations/operations";

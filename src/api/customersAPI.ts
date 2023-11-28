@@ -1,5 +1,5 @@
 import axios from "axios";
-import { TCustomerData } from "../types/CustomerData";
+import { TCustomerData } from "../redux/types/CustomerData";
 
 axios.defaults.baseURL = "http://localhost:3004";
 

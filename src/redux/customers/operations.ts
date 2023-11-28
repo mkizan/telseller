@@ -4,7 +4,7 @@ import {
   getCustomers,
   getSomeCustomer,
 } from "../../api/customersAPI";
-import { TCustomerData } from "../../types/CustomerData";
+import { TCustomerData } from "../types/CustomerData";
 
 export const getCustomersThunk = createAsyncThunk(
   "customers/get",

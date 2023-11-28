@@ -1,24 +1,7 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { getOrganizationsThunk } from "./operations";
 import { RootState } from "../store";
-
-interface IOrganization {
-  id: number;
-  prefix: string;
-  title: string;
-}
-
-interface IOrganizationsInitialState {
-  isLoading: boolean;
-  organizations: Array<IOrganization>;
-  error: string | undefined;
-}
-
-const initialState: IOrganizationsInitialState = {
-  isLoading: false,
-  organizations: [],
-  error: "",
-};
+import { initialState } from "./initialState";
 
 const organizationsSlice = createSlice({
   name: "organizations",
@@ -28,13 +11,10 @@ const organizationsSlice = createSlice({
       .addCase(getOrganizationsThunk.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(
-        getOrganizationsThunk.fulfilled,
-        (state, action: PayloadAction<Array<IOrganization>>) => {
-          state.isLoading = false;
-          state.organizations = action.payload;
-        }
-      )
+      .addCase(getOrganizationsThunk.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.organizations = action.payload;
+      })
       .addCase(getOrganizationsThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.organizations = [];
