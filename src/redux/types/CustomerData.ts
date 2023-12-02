@@ -1,13 +1,14 @@
 export type TCustomerData = {
   id?: number;
-  name: string;
+  firstName: string;
+  lastName: string;
   code?: number;
   group?: string;
   organization: string;
-  contract?: [];
+  contract: string;
   debt: number;
-  personalPhoneNumber: string;
-  workPhoneNumber?: string;
+  personalPhone: string;
+  workPhone?: string;
   street?: string;
   build?: number;
   city: string;

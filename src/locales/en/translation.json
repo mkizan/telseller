@@ -1,0 +1,28 @@
+{
+  "homeTitle": "This program was created for mobile commerce outside the office or store",
+  "button": {
+    "addCustomer": "add customer"
+  },
+  "field": {
+    "firstName": "first name",
+    "lastName": "last name",
+    "code": "identification code",
+    "organization": "organization",
+    "contract": "contract",
+    "debt": "debt",
+    "city": "city",
+    "street": "street",
+    "build": "build",
+    "personalPhone": "personal phone",
+    "workPhone": "work phone",
+    "comment": "comment",
+    "addCustomer": "add customer"
+  },
+  "error": {
+    "message": {
+      "required": "This field is required",
+      "minLength": "{{fieldName}} must be at least {{minLength}} characters long",
+      "maxLength": "{{fieldName}} cannot exceed {{maxLength}} characters"
+    }
+  }
+}

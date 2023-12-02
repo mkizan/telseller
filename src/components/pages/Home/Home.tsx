@@ -1,10 +1,11 @@
-// import Header from "../Header";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { t } = useTranslation();
   return (
-    <>
-      <h1>HOME</h1>
-    </>
+    <div className="my-3 mx-3">
+      <p className="text-center">{t("ns:homeTitle")}</p>
+    </div>
   );
 };
 

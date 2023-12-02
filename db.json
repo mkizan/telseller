@@ -36,7 +36,8 @@
   "customers": [
     {
       "id": 1,
-      "name": "Мангус Зоряна",
+      "firstName": "Зоряна",
+      "lastName": "Мангус",
       "code": 2609236790,
       "group": "Каскад",
       "organization": "ПП",
@@ -51,7 +52,8 @@
     },
     {
       "id": 2,
-      "name": "Микит Василь",
+      "firstName": "Зоряна",
+      "lastName": "Мангус",
       "code": 2609234312,
       "group": "Каскад",
       "organization": "ПП",
@@ -63,34 +65,6 @@
       "build": 7,
       "city": "Івано-Франківськ",
       "comment": ""
-    },
-    {
-      "name": "Микола",
-      "code": "3302323212",
-      "organization": "ФОП",
-      "contract": "фвфвфв",
-      "debt": "0",
-      "city": "",
-      "street": "",
-      "build": "",
-      "personalPhoneNumber": "1231231231",
-      "workPhoneNumber": "",
-      "comment": "",
-      "id": 3
-    },
-    {
-      "name": "Beauty Club - IF",
-      "code": "",
-      "organization": "ПП",
-      "contract": "some contract",
-      "debt": "0",
-      "city": "",
-      "street": "",
-      "build": "",
-      "personalPhoneNumber": "380951234567",
-      "workPhoneNumber": "",
-      "comment": "",
-      "id": 4
     }
   ],
   "productCatalog": [

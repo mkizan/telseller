@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.field-required {
+  @apply after:content-['*'] after:ml-0.5 after:text-red-500 first-letter:capitalize;
+}
