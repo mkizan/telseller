@@ -7,8 +7,6 @@ import {
 } from "../../redux/navbar/navbarSlice";
 
 const Header = () => {
-  // const [toggleNavbar, setToggleNavbar] = useState(false);
-  // const handleClickHidden = () => setToggleNavbar(!toggleNavbar);
   const dispatch = useAppDispatch();
   const { toggleNavbar } = useAppSelector(navbarSelector);
 
@@ -18,7 +16,6 @@ const Header = () => {
         <button
           type="button"
           className="inline-flex mr-5"
-          // onClick={handleClickHidden}
           onClick={() => dispatch(setToggleNavbar(!toggleNavbar))}
         >
           <svg
@@ -70,7 +67,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* {toggleNavbar && <Navbar onNavbar={handleClickHidden} />} */}
         {toggleNavbar && <Navbar />}
       </header>
     </>

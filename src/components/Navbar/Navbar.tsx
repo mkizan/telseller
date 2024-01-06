@@ -10,12 +10,10 @@ import {
   navbarSelector,
   setToggleNavbar,
 } from "../../redux/navbar/navbarSlice";
-
-// interface IProps {
-//   onNavbar: setToggleNavbar;
-// }
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const { referenceDirectoriesList } = useAppSelector(
     referenceDirectoriesListSelector
   );
@@ -35,7 +33,9 @@ const Navbar = () => {
         <div className="w-full flex flex-col justify-center items-center">
           <h2 className="mt-10 text-3xl text-accent font-bold">TelSeller</h2>
 
-          <h3 className="hidden text-xl font-bold">Довідники</h3>
+          <h3 className="hidden text-xl font-bold">
+            {t("ns:text.title.referenceDirectories")}
+          </h3>
           {/* render reference directories list */}
           <ReferenceDirectoriesList />
 
@@ -65,7 +65,6 @@ const Navbar = () => {
             type="button"
             className="flex flex-col items-center py-7 px-7"
             onClick={() => dispatch(setToggleNavbar(!toggleNavbar))}
-            // onClick={onNavbar}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

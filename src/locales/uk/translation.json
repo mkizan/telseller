@@ -1,4 +1,17 @@
 {
+  "text": {
+    "title": {
+      "referenceDirectories": "довідники",
+      "organizations": "організації",
+      "customers": "контрагенти",
+      "nomenclature": "номенклатура",
+      "documents": "документи",
+      "customerOrder": "замовлення",
+      "cashDocuments": "каса",
+      "salesTransaction": "реалізації"
+    },
+    "description": {}
+  },
   "homeTitle": "Дана програма була створена для мобільної торгівлі за межами офісу чи магазину",
   "button": {
     "addCustomer": "додати контрагента"

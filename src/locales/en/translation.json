@@ -1,4 +1,17 @@
 {
+  "text": {
+    "title": {
+      "referenceDirectories": "reference directories",
+      "organizations": "organizations",
+      "customers": "customers",
+      "nomenclature": "nomenclature",
+      "documents": "documents",
+      "customerOrder": "customer order",
+      "cashDocuments": "cash documents",
+      "salesTransaction": "sales transaction"
+    },
+    "description": {}
+  },
   "homeTitle": "This program was created for mobile commerce outside the office or store",
   "button": {
     "addCustomer": "add customer"
