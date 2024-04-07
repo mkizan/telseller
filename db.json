@@ -80,6 +80,19 @@
       "img": "url",
       "manufacturer": "Babyliss",
       "barcode": "3030050045994"
+    },
+    {
+      "id": 2,
+      "title": "Фен Babyliss Pro Caruso (2400W) (BAB6520RE)",
+      "status": "Новий",
+      "quantity": 5,
+      "price": {
+        "salon": 1857,
+        "retail": 1950
+      },
+      "img": "url",
+      "manufacturer": "Babyliss",
+      "barcode": "3030050045994"
     }
   ]
 }

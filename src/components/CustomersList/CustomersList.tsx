@@ -20,7 +20,9 @@ const CustomersList = () => {
       <ul>
         {customers.map((customer) => (
           <li key={customer.id}>
-            <Link to={`../customer/${customer.id}`}>{customer.name}</Link>
+            <Link to={`../customer/${customer.id}`}>
+              {customer.firstName} {customer.lastName}
+            </Link>
             <p>
               {customer?.city}, {customer?.street}, {customer?.build}
             </p>
