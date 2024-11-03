@@ -4,16 +4,28 @@ import { TCustomerData } from "../redux/types/CustomerData";
 axios.defaults.baseURL = "http://localhost:3004";
 
 export const getCustomers = async () => {
-  const response = await axios.get("/customers");
-  return response.data;
+  try {
+    const response = await axios.get("/customers");
+    return response.data;
+  } catch (error: unknown) {
+    return error;
+  }
 };
 
 export const getSomeCustomer = async (id: number) => {
-  const response = await axios.get(`/customers/${id}`);
-  return response.data;
+  try {
+    const response = await axios.get(`/customers/${id}`);
+    return response.data;
+  } catch (error: unknown) {
+    return error;
+  }
 };
 
 export const addNewCustomer = async (data: TCustomerData) => {
-  const response = await axios.post("customers", data);
-  return response.data;
+  try {
+    const response = await axios.post("customers", data);
+    return response.data;
+  } catch (error: unknown) {
+    return error;
+  }
 };

@@ -253,7 +253,7 @@ const CustomerForm = () => {
           type="submit"
           className="w-full py-2 text-center bg-bgPrimary text-primary rounded first-letter:capitalize"
         >
-          {t("ns:field.addCustomer")}
+          {t("ns:button.addCustomer")}
         </button>
       </form>
     </>

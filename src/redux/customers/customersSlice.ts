@@ -12,20 +12,20 @@ export const customersSlice = createSlice({
       .addCase(getCustomersThunk.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(addNewCustomerThunk.pending, (state) => {
-        state.isLoading = true;
-      })
       .addCase(getCustomersThunk.fulfilled, (state, action) => {
-        state.isLoading = false;
-        state.customers = action.payload;
-      })
-      .addCase(addNewCustomerThunk.fulfilled, (state, action) => {
         state.isLoading = false;
         state.customers = action.payload;
       })
       .addCase(getCustomersThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
+      })
+      .addCase(addNewCustomerThunk.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addNewCustomerThunk.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.customers = action.payload;
       })
       .addCase(addNewCustomerThunk.rejected, (state, action) => {
         state.isLoading = false;

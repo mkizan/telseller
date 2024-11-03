@@ -8,7 +8,9 @@
       "documents": "documents",
       "customerOrder": "customer order",
       "cashDocuments": "cash documents",
-      "salesTransaction": "sales transaction"
+      "salesTransaction": "sales transaction",
+      "debts": "debts",
+      "receiptReturn": "receipt/return"
     },
     "description": {}
   },
@@ -28,8 +30,7 @@
     "build": "build",
     "personalPhone": "personal phone",
     "workPhone": "work phone",
-    "comment": "comment",
-    "addCustomer": "add customer"
+    "comment": "comment"
   },
   "error": {
     "message": {

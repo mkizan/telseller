@@ -8,7 +8,9 @@
       "documents": "документи",
       "customerOrder": "замовлення",
       "cashDocuments": "каса",
-      "salesTransaction": "реалізації"
+      "salesTransaction": "реалізації",
+      "debts": "борги",
+      "receiptReturn": "надходження/повернення"
     },
     "description": {}
   },

@@ -2,10 +2,11 @@
 // import { FiShoppingBag } from "react-icons/fi";
 // import { MdOutlinePeopleAlt } from "react-icons/md";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { referenceDirectoriesListSelector } from "../../redux/referenceDirectoriesList/referenceDirectoriesListSlice";
 import { referenceDirectoriesListThunk } from "../../redux/referenceDirectoriesList/operations";
-import ReferenceDirectoriesList from "../ReferenceDirectoriesList";
+// import ReferenceDirectoriesList from "../ReferenceDirectoriesList";
 import {
   navbarSelector,
   setToggleNavbar,
@@ -37,27 +38,42 @@ const Navbar = () => {
             {t("ns:text.title.referenceDirectories")}
           </h3>
           {/* render reference directories list */}
-          <ReferenceDirectoriesList />
+          {/* <ReferenceDirectoriesList /> */}
+          <ul className="flex flex-col w-full items-center mt-7">
+            <li className="flex items-center py-4 px-6 font-[500] uppercase">
+              <NavLink to="organizations">
+                {t("ns:text.title.organizations")}
+              </NavLink>
+            </li>
+            <li className="flex items-center py-4 px-6 font-[500] uppercase">
+              {t("ns:text.title.customers")}
+            </li>
+            <li className="flex items-center py-4 px-6 font-[500] uppercase">
+              {t("ns:text.title.nomenclature")}
+            </li>
+          </ul>
 
-          <h3 className="hidden text-xl font-bold">Документи</h3>
+          <h3 className="hidden text-xl font-bold">
+            {t("ns:text.title.documents")}
+          </h3>
           {/* render documents */}
           <ul className="flex flex-col w-full items-center mt-1 border-t-2 border-accent">
             <li className="py-5 px-6 font-[500] uppercase">
               <a href="#" className="">
-                замовлення
+                {t("ns:text.title.customerOrder")}
               </a>
             </li>
             <li className="py-4 px-6 font-[500] uppercase">
-              <a href="#">каса</a>
+              <a href="#">{t("ns:text.title.cashDocuments")}</a>
             </li>
             <li className="py-4 px-6 font-[500] uppercase">
-              <a href="#">борги</a>
+              <a href="#">{t("ns:text.title.debts")}</a>
             </li>
             <li className="py-4 px-6 font-[500] uppercase">
-              <a href="#">реалізації</a>
+              <a href="#">{t("ns:text.title.salesTransaction")}</a>
             </li>
             <li className="py-4 px-6 font-[500] uppercase">
-              <a href="#">надходження/повернення</a>
+              <a href="#">{t("ns:text.title.receiptReturn")}</a>
             </li>
           </ul>
 
