@@ -1,20 +1,19 @@
-import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
-import { getOrganizationsThunk } from "../../redux/organizations/operations";
 import OrganizationsListItem from "../OrganizationsListItem";
 import { Link } from "react-router-dom";
+import { useGetOrganizationsQuery } from "../../redux/organizations/organiationsApi";
 
 const OrganizationsList = () => {
-  const { organizations } = useAppSelector(organizationsSelector);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(getOrganizationsThunk());
-  }, [dispatch]);
+  const {
+    data: organizations,
+    isLoading,
+    isError,
+  } = useGetOrganizationsQuery();
+  console.log("organizations >> ", organizations);
 
   return (
     <>
+      {isError && <div>Error while loading organizations</div>}
+      {isLoading && <div>Loading...</div>}
       <button type="button" className="px-3 py-1 font-bold border">
         <Link to="/">Back</Link>
       </button>
@@ -26,7 +25,7 @@ const OrganizationsList = () => {
           </tr>
         </thead>
         <tbody>
-          {organizations.map((organization) => (
+          {organizations?.map((organization) => (
             <tr key={organization.id}>
               <OrganizationsListItem
                 prefix={organization.prefix}
