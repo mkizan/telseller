@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 // import i18n from "../../i18n";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -8,8 +8,8 @@ import { useHookFormMask } from "use-mask-input";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { addNewCustomerThunk } from "../../redux/customers/operations";
 import { TCustomerData } from "../../redux/types/CustomerData";
-import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
-import { getOrganizationsThunk } from "../../redux/organizations/operations";
+// import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
+// import { getOrganizationsThunk } from "../../redux/organizations/operations";
 import addCustomerFormSchema from "../../schemas/addCustomerFormSchema";
 import useValidationSchema from "../../hooks/useValidationSchema";
 
@@ -27,12 +27,12 @@ const CustomerForm = () => {
   });
 
   const registerWithMask = useHookFormMask(register);
-  const { organizations } = useAppSelector(organizationsSelector);
+  // const { organizations } = useAppSelector(organizationsSelector);
 
   const dispatch = useAppDispatch();
-  useEffect(() => {
-    dispatch(getOrganizationsThunk());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(getOrganizationsThunk());
+  // }, [dispatch]);
 
   const onSubmit = (data: TCustomerData) => {
     dispatch(addNewCustomerThunk(data));
@@ -116,9 +116,9 @@ const CustomerForm = () => {
           {...register("organization", { required: true })}
           id="organization"
         >
-          {organizations.map((org) => (
+          {/* {organizations.map((org) => (
             <option key={org.id}>{org.title}</option>
-          ))}
+          ))} */}
         </select>
         {errors.organization && (
           <span className="block text-required first-letter:capitalize">
