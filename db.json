@@ -1,21 +1,4 @@
 {
-  "referenceDirectoriesList": [
-    {
-      "id": 1,
-      "title": "Організації",
-      "route": "organizations"
-    },
-    {
-      "id": 2,
-      "title": "Контрагенти",
-      "route": "customers"
-    },
-    {
-      "id": 3,
-      "title": "Номенклатура",
-      "route": "products"
-    }
-  ],
   "organizations": [
     {
       "id": 1,

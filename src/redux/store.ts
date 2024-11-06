@@ -1,6 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import { organizationsReducer } from "./organizations/organizationsSlice";
-import { referenceDirectoriesListReducer } from "./referenceDirectoriesList/referenceDirectoriesListSlice";
 import { navbarReducer } from "./navbar/navbarSlice";
 import { customersReducer } from "./customers/customersSlice";
 import { organizationsApi } from "./organizations/organiationsApi";
@@ -8,7 +6,6 @@ import { organizationsApi } from "./organizations/organiationsApi";
 export const store = configureStore({
   reducer: {
     navbar: navbarReducer,
-    referenceDirectoriesList: referenceDirectoriesListReducer,
     customers: customersReducer,
     [organizationsApi.reducerPath]: organizationsApi.reducer,
   },

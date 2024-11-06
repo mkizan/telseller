@@ -1,12 +1,8 @@
 // import { RiBuilding4Line } from "react-icons/ri";
 // import { FiShoppingBag } from "react-icons/fi";
 // import { MdOutlinePeopleAlt } from "react-icons/md";
-import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { referenceDirectoriesListSelector } from "../../redux/referenceDirectoriesList/referenceDirectoriesListSlice";
-import { referenceDirectoriesListThunk } from "../../redux/referenceDirectoriesList/operations";
-// import ReferenceDirectoriesList from "../ReferenceDirectoriesList";
 import {
   navbarSelector,
   setToggleNavbar,
@@ -15,18 +11,9 @@ import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const { t } = useTranslation();
-  const { referenceDirectoriesList } = useAppSelector(
-    referenceDirectoriesListSelector
-  );
   const { toggleNavbar } = useAppSelector(navbarSelector);
 
   const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    if (referenceDirectoriesList.length === 0) {
-      dispatch(referenceDirectoriesListThunk());
-    }
-  }, [dispatch, referenceDirectoriesList.length]);
 
   return (
     <>
@@ -37,8 +24,7 @@ const Navbar = () => {
           <h3 className="hidden text-xl font-bold">
             {t("ns:text.title.referenceDirectories")}
           </h3>
-          {/* render reference directories list */}
-          {/* <ReferenceDirectoriesList /> */}
+          {/* render reference directories */}
           <ul className="flex flex-col w-full items-center mt-7">
             <li className="flex items-center py-4 px-6 font-[500] uppercase">
               <NavLink to="organizations">
