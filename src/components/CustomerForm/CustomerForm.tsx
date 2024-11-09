@@ -1,13 +1,13 @@
-// import { useEffect } from "react";
-// import i18n from "../../i18n";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useHookFormMask } from "use-mask-input";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { addNewCustomerThunk } from "../../redux/customers/operations";
-import { TCustomerData } from "../../redux/types/CustomerData";
+import {
+  TCustomerData,
+  useAddCustomerMutation,
+} from "../../redux/api/customersApi";
+
 // import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
 // import { getOrganizationsThunk } from "../../redux/organizations/operations";
 import addCustomerFormSchema from "../../schemas/addCustomerFormSchema";
@@ -16,6 +16,8 @@ import useValidationSchema from "../../hooks/useValidationSchema";
 const CustomerForm = () => {
   const { t } = useTranslation();
   const { validationSchema } = useValidationSchema(addCustomerFormSchema);
+
+  const [addCustomer] = useAddCustomerMutation();
 
   const {
     register,
@@ -27,15 +29,9 @@ const CustomerForm = () => {
   });
 
   const registerWithMask = useHookFormMask(register);
-  // const { organizations } = useAppSelector(organizationsSelector);
-
-  const dispatch = useAppDispatch();
-  // useEffect(() => {
-  //   dispatch(getOrganizationsThunk());
-  // }, [dispatch]);
 
   const onSubmit = (data: TCustomerData) => {
-    dispatch(addNewCustomerThunk(data));
+    addCustomer(data);
     reset();
   };
 

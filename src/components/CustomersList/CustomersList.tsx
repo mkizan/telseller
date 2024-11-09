@@ -1,24 +1,19 @@
 import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { customersSelector } from "../../redux/customers/customersSlice";
-import { useEffect } from "react";
-import { getCustomersThunk } from "../../redux/customers/operations";
+import { useGetCustomersQuery } from "../../redux/api/customersApi";
+import { useTranslation } from "react-i18next";
 
 const CustomersList = () => {
-  const { customers } = useAppSelector(customersSelector);
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(getCustomersThunk());
-  }, [dispatch]);
-
+  const { t } = useTranslation();
+  const { data: customers, isLoading, isError } = useGetCustomersQuery();
   return (
     <div className="relative h-full">
       <Link to="../" className="inline-block px-3 py-1 font-bold border mb-2">
         Back
       </Link>
+      {isError && <div>{t("ns:error.message.loading")}</div>}
+      {isLoading && <div>{t("ns:text.status.loading")}</div>}
       <ul>
-        {customers.map((customer) => (
+        {customers?.map((customer) => (
           <li key={customer.id}>
             <Link to={`../customer/${customer.id}`}>
               {customer.firstName} {customer.lastName}
