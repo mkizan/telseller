@@ -6,12 +6,6 @@ type TOrganizationData = {
   title: string;
 };
 
-// type TOrganizationsInitialState = {
-//   isLoading: boolean;
-//   organizations: Array<TOrganizationData>;
-//   error: string | undefined;
-// };
-
 export const organizationsApi = createApi({
   reducerPath: "organizations",
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3004" }),

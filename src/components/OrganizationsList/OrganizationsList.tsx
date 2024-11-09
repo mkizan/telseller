@@ -1,6 +1,6 @@
 import OrganizationsListItem from "../OrganizationsListItem";
 import { Link } from "react-router-dom";
-import { useGetOrganizationsQuery } from "../../redux/organizations/organiationsApi";
+import { useGetOrganizationsQuery } from "../../redux/api/organiationsApi";
 
 const OrganizationsList = () => {
   const {
@@ -8,7 +8,6 @@ const OrganizationsList = () => {
     isLoading,
     isError,
   } = useGetOrganizationsQuery();
-  console.log("organizations >> ", organizations);
 
   return (
     <>

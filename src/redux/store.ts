@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { navbarReducer } from "./navbar/navbarSlice";
 import { customersReducer } from "./customers/customersSlice";
-import { organizationsApi } from "./organizations/organiationsApi";
+import { organizationsApi } from "./api/organiationsApi";
 
 export const store = configureStore({
   reducer: {
