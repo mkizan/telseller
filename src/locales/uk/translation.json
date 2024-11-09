@@ -1,6 +1,7 @@
 {
   "text": {
     "title": {
+      "referenceDirectories": "довідники",
       "organizations": "організації",
       "customers": "контрагенти",
       "nomenclature": "номенклатура",
@@ -11,7 +12,16 @@
       "debts": "борги",
       "receiptReturn": "надходження/повернення"
     },
-    "description": {}
+    "description": {},
+    "status": {
+      "loading": "завантаження..."
+    },
+    "columnTitle": {
+      "org": {
+        "prefix": "префікс",
+        "name": "назва"
+      }
+    }
   },
   "homeTitle": "Дана програма була створена для мобільної торгівлі за межами офісу чи магазину",
   "button": {
@@ -35,7 +45,8 @@
     "message": {
       "required": "Це поле є обов'язковим",
       "minLength": "{{fieldName}} має містити принаймі {{minLength}} символи(-ів)",
-      "maxLength": "{{fieldName}} не може перевищувати {{maxLength}} символів"
+      "maxLength": "{{fieldName}} не може перевищувати {{maxLength}} символів",
+      "loading": "помилка під час завантаження організацій"
     }
   }
 }

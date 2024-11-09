@@ -27,7 +27,10 @@ const Navbar = () => {
           {/* render reference directories */}
           <ul className="flex flex-col w-full items-center mt-7">
             <li className="flex items-center py-4 px-6 font-[500] uppercase">
-              <NavLink to="organizations">
+              <NavLink
+                to="organizations"
+                onClick={() => dispatch(setToggleNavbar(!toggleNavbar))}
+              >
                 {t("ns:text.title.organizations")}
               </NavLink>
             </li>

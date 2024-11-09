@@ -12,7 +12,16 @@
       "debts": "debts",
       "receiptReturn": "receipt/return"
     },
-    "description": {}
+    "description": {},
+    "status": {
+      "loading": "loading..."
+    },
+    "columnTitle": {
+      "org": {
+        "prefix": "prefix",
+        "name": "name"
+      }
+    }
   },
   "homeTitle": "This program was created for mobile commerce outside the office or store",
   "button": {
@@ -36,7 +45,8 @@
     "message": {
       "required": "This field is required",
       "minLength": "{{fieldName}} must be at least {{minLength}} characters long",
-      "maxLength": "{{fieldName}} cannot exceed {{maxLength}} characters"
+      "maxLength": "{{fieldName}} cannot exceed {{maxLength}} characters",
+      "loading": "error while loading organizations"
     }
   }
 }
