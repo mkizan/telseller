@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { navbarReducer } from "./navbar/navbarSlice";
 import { organizationsApi } from "./api/organiationsApi";
 import { customersApi } from "./api/customersApi";
+import { setupListeners } from "@reduxjs/toolkit/query";
 
 export const store = configureStore({
   reducer: {
@@ -15,5 +16,6 @@ export const store = configureStore({
       .concat(customersApi.middleware),
 });
 
+setupListeners(store.dispatch);
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

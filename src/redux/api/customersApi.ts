@@ -2,18 +2,19 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 import { BASE_URL } from "../../constants/baseURL";
 
 export type TCustomerData = {
-  id?: number;
+  id?: number | string;
   firstName: string;
   lastName: string;
   code?: number;
   group?: string;
-  organization: string;
+  organization?: string;
   contract: string;
   debt: number;
   personalPhone: string;
   workPhone?: string;
-  street?: string;
-  build?: number;
+  street: string;
+  build: number;
+  apartment?: string;
   city: string;
   comment: string;
 };
@@ -23,13 +24,14 @@ type TNewCustomer = {
   lastName: string;
   code?: number;
   group?: string;
-  organization: string;
+  organization?: string;
   contract: string;
   debt: number;
   personalPhone: string;
   workPhone?: string;
-  street?: string;
-  build?: number;
+  street: string;
+  build: number;
+  apartment?: string;
   city: string;
   comment: string;
 };
@@ -49,9 +51,16 @@ export const customersApi = createApi({
     }),
     addCustomer: builder.mutation<TCustomerData, TNewCustomer>({
       query: (newCustomer) => ({
-        url: "/customer/create",
+        url: "/customers",
         method: "POST",
         body: newCustomer,
+      }),
+      invalidatesTags: ["customers"],
+    }),
+    deleteCustomer: builder.mutation({
+      query: (id) => ({
+        url: `/customers/${id}`,
+        method: "DELETE",
       }),
       invalidatesTags: ["customers"],
     }),
@@ -62,4 +71,5 @@ export const {
   useGetCustomersQuery,
   useGetOneCustomerQuery,
   useAddCustomerMutation,
+  useDeleteCustomerMutation,
 } = customersApi;

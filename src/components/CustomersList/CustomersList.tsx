@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
-import { useGetCustomersQuery } from "../../redux/api/customersApi";
+import {
+  useDeleteCustomerMutation,
+  useGetCustomersQuery,
+} from "../../redux/api/customersApi";
 import { useTranslation } from "react-i18next";
 
 const CustomersList = () => {
   const { t } = useTranslation();
   const { data: customers, isLoading, isError } = useGetCustomersQuery();
+  const [deleteCustomer] = useDeleteCustomerMutation();
   return (
     <div className="relative h-full">
       <Link to="../" className="inline-block px-3 py-1 font-bold border mb-2">
-        Back
+        {t("ns:text.navigation.back")}
       </Link>
       {isError && <div>{t("ns:error.message.loading")}</div>}
       {isLoading && <div>{t("ns:text.status.loading")}</div>}
@@ -21,6 +25,12 @@ const CustomersList = () => {
             <p>
               {customer?.city}, {customer?.street}, {customer?.build}
             </p>
+            <button
+              className="px-2 py-0.5 rounded bg-red-500"
+              onClick={() => deleteCustomer(customer.id)}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>
