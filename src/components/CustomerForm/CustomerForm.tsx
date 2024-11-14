@@ -1,21 +1,20 @@
-// import { useEffect } from "react";
-// import i18n from "../../i18n";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useHookFormMask } from "use-mask-input";
-import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-import { addNewCustomerThunk } from "../../redux/customers/operations";
-import { TCustomerData } from "../../redux/types/CustomerData";
-// import { organizationsSelector } from "../../redux/organizations/organizationsSlice";
-// import { getOrganizationsThunk } from "../../redux/organizations/operations";
 import addCustomerFormSchema from "../../schemas/addCustomerFormSchema";
 import useValidationSchema from "../../hooks/useValidationSchema";
+import {
+  TCustomerData,
+  useAddCustomerMutation,
+} from "../../redux/api/customersApi";
 
 const CustomerForm = () => {
   const { t } = useTranslation();
   const { validationSchema } = useValidationSchema(addCustomerFormSchema);
+
+  const [addCustomer] = useAddCustomerMutation();
 
   const {
     register,
@@ -27,15 +26,9 @@ const CustomerForm = () => {
   });
 
   const registerWithMask = useHookFormMask(register);
-  // const { organizations } = useAppSelector(organizationsSelector);
-
-  const dispatch = useAppDispatch();
-  // useEffect(() => {
-  //   dispatch(getOrganizationsThunk());
-  // }, [dispatch]);
 
   const onSubmit = (data: TCustomerData) => {
-    dispatch(addNewCustomerThunk(data));
+    addCustomer(data);
     reset();
   };
 
@@ -45,7 +38,7 @@ const CustomerForm = () => {
         to="../customers"
         className="inline-block px-3 py-2 font-bold border mb-2"
       >
-        назад
+        {t("ns:text.navigation.back")}
       </Link>
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col px-3">
@@ -63,7 +56,7 @@ const CustomerForm = () => {
           type="text"
           id="firstName"
           autoComplete="off"
-          placeholder="Назва контрагента"
+          placeholder={t("ns:field.placeholders.firstName")}
           className="block focus:outline-accent hover:outline-second py-1 px-2"
         />
         {errors.firstName && (
@@ -85,7 +78,7 @@ const CustomerForm = () => {
           type="text"
           id="lastName"
           autoComplete="off"
-          placeholder="Назва контрагента"
+          placeholder={t("ns:field.placeholders.lastName")}
           className="block focus:outline-accent hover:outline-second py-1 px-2"
         />
         {errors.lastName && (
@@ -97,7 +90,12 @@ const CustomerForm = () => {
         <label htmlFor="code" className="first-letter:capitalize">
           {t("ns:field.code")}
         </label>
-        <input {...register("code")} type="number" id="code" />
+        <input
+          {...(register("code"), { required: false })}
+          type="number"
+          id="code"
+          placeholder="1234567890"
+        />
         {errors.code && (
           <span className="block text-required first-letter:capitalize">
             {errors.code.message}
@@ -109,17 +107,20 @@ const CustomerForm = () => {
           <option value="">{}</option>
         </select> */}
 
-        <label htmlFor="organization" className="field-required">
-          {t("ns:field.organization")}
-        </label>
-        <select
-          {...register("organization", { required: true })}
+        <label htmlFor="organization">{t("ns:field.organization")}</label>
+        <input
+          {...register("organization", { required: false })}
+          type="text"
+          id="organization"
+        />
+        {/* <select
+          {...register("organization", { required: false })}
           id="organization"
         >
-          {/* {organizations.map((org) => (
+          { {organizations.map((org) => (
             <option key={org.id}>{org.title}</option>
-          ))} */}
-        </select>
+          ))}}
+        </select> */}
         {errors.organization && (
           <span className="block text-required first-letter:capitalize">
             {errors.organization.message}
@@ -130,10 +131,10 @@ const CustomerForm = () => {
           {t("ns:field.contract")}
         </label>
         <input
-          {...register("contract", { required: true })}
+          {...register("contract", { required: false })}
           type="text"
           id="contract"
-          placeholder="Основний договір"
+          placeholder={t("ns:field.placeholders.contract")}
         />
         {errors.contract && (
           <span className="block text-required first-letter:capitalize">
@@ -148,6 +149,7 @@ const CustomerForm = () => {
           {...register("debt", { required: true })}
           type="number"
           id="debt"
+          placeholder="2039.00"
         />
         {errors.debt && (
           <span className="block text-required first-letter:capitalize">
@@ -162,7 +164,7 @@ const CustomerForm = () => {
           {...register("city", { required: true })}
           type="text"
           id="city"
-          placeholder="City"
+          placeholder={t("ns:field.placeholders.city")}
         />
         {errors.city && (
           <span className="block text-required first-letter:capitalize">
@@ -170,14 +172,17 @@ const CustomerForm = () => {
           </span>
         )}
 
-        <label htmlFor="street" className="first-letter:capitalize">
+        <label
+          htmlFor="street"
+          className="field-required first-letter:capitalize"
+        >
           {t("ns:field.street")}
         </label>
         <input
-          {...register("street")}
+          {...(register("street"), { required: true })}
           type="text"
           id="street"
-          placeholder="Street"
+          placeholder={t("ns:field.placeholders.street")}
         />
         {errors.street && (
           <span className="block text-required first-letter:capitalize">
@@ -185,18 +190,36 @@ const CustomerForm = () => {
           </span>
         )}
 
-        <label htmlFor="build" className="first-letter:capitalize">
+        <label
+          htmlFor="build"
+          className="field-required first-letter:capitalize"
+        >
           {t("ns:field.build")}
         </label>
         <input
-          {...register("build")}
+          {...(register("build"), { required: true })}
           type="number"
           id="build"
-          placeholder="Build"
+          placeholder="4"
         />
         {errors.build && (
           <span className="block text-required first-letter:capitalize">
             {errors.build.message}
+          </span>
+        )}
+
+        <label htmlFor="apartment" className="first-letter:capitalize">
+          {t("ns:field.apartment")}
+        </label>
+        <input
+          {...register("apartment")}
+          type="number"
+          id="apartment"
+          placeholder="25"
+        />
+        {errors.apartment && (
+          <span className="block text-required first-letter:capitalize">
+            {errors.apartment.message}
           </span>
         )}
 
@@ -222,7 +245,8 @@ const CustomerForm = () => {
           {t("ns:field.workPhone")}
         </label>
         <input
-          {...registerWithMask("workPhone", "+38 (999) 999-99-99")}
+          {...(registerWithMask("workPhone", "+38 (999) 999-99-99"),
+          { required: false })}
           type="tel"
           inputMode="numeric"
           placeholder="+38 (999) 999-99-99"
@@ -242,6 +266,7 @@ const CustomerForm = () => {
           rows={2}
           cols={2}
           className="mb-2"
+          placeholder={t("ns:field.placeholders.comment")}
         />
         {errors.comment && (
           <p className="text-required first-letter:capitalize">

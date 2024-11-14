@@ -1,24 +1,24 @@
 {
   "organizations": [
     {
-      "id": 1,
+      "id": "1",
       "prefix": "PK",
       "title": "ПП"
     },
     {
-      "id": 2,
+      "id": "2",
       "prefix": "ЕР",
       "title": "ФОП Краса"
     },
     {
-      "id": 3,
+      "id": "3",
       "prefix": "ЕН",
       "title": "ФОП Ернесто"
     }
   ],
   "customers": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "Зоряна",
       "lastName": "Мангус",
       "code": 2609236790,
@@ -34,7 +34,7 @@
       "comment": ""
     },
     {
-      "id": 2,
+      "id": "2",
       "firstName": "Зоряна",
       "lastName": "Мангус",
       "code": 2609234312,
@@ -48,11 +48,22 @@
       "build": 7,
       "city": "Івано-Франківськ",
       "comment": ""
+    },
+    {
+      "id": "e330",
+      "firstName": "Микола",
+      "lastName": "Кізан",
+      "organization": "PK",
+      "contract": "Основний договір (грн)",
+      "debt": 0,
+      "city": "Івано-Франківськ",
+      "personalPhone": "+38 (050) 723-08-17",
+      "comment": ""
     }
   ],
   "productCatalog": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Фен Babyliss Pro Caruso (2400W) (BAB6520RE)",
       "status": "Новий",
       "quantity": 4,
@@ -65,7 +76,7 @@
       "barcode": "3030050045994"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Фен Babyliss Pro Caruso (2400W) (BAB6520RE)",
       "status": "Новий",
       "quantity": 5,

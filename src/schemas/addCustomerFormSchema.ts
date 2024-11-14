@@ -1,8 +1,8 @@
-import { z } from "zod";
+import { z as w } from "zod";
 import i18n from "../i18n";
 
-const addCustomerFormSchema = z.object({
-  firstName: z
+const addCustomerFormSchema = w.object({
+  firstName: w
     .string()
     .min(
       2,
@@ -18,7 +18,7 @@ const addCustomerFormSchema = z.object({
         maxLength: 20,
       })
     ),
-  lastName: z
+  lastName: w
     .string()
     .min(
       2,
@@ -34,7 +34,7 @@ const addCustomerFormSchema = z.object({
         maxLength: 25,
       })
     ),
-  code: z.coerce
+  code: w.coerce
     .number()
     .min(
       999999999,
@@ -51,7 +51,7 @@ const addCustomerFormSchema = z.object({
       })
     )
     .optional(),
-  organization: z
+  organization: w
     .string()
     .min(
       2,
@@ -66,8 +66,9 @@ const addCustomerFormSchema = z.object({
         fieldName: i18n.t("ns:field.organization"),
         maxLength: 50,
       })
-    ),
-  contract: z
+    )
+    .optional(),
+  contract: w
     .string()
     .min(
       2,
@@ -83,32 +84,32 @@ const addCustomerFormSchema = z.object({
         maxLength: 30,
       })
     ),
-  debt: z.coerce
+  debt: w.coerce
     .number()
     .min(
       0,
       i18n.t("ns:error.message.minLength", {
         fieldName: i18n.t("ns:field.debt"),
-        minLength: 0,
+        minLength: 1,
       })
     )
     .max(
-      10000,
+      2000,
       i18n.t("ns:error.message.maxLength", {
         fieldName: i18n.t("ns:field.debt"),
-        maxLength: 10000,
+        maxLength: 7,
       })
     ),
-  city: z.string().min(
+  city: w.string().min(
     4,
     i18n.t("ns:error.message.minLength", {
       fieldName: i18n.t("ns:field.city"),
       minLength: 4,
     })
   ),
-  street: z.string().optional(),
-  build: z.coerce.number().optional(),
-  personalPhone: z
+  street: w.string().optional(),
+  build: w.coerce.number().optional(),
+  personalPhone: w
     .string()
     .min(
       19,
@@ -124,7 +125,7 @@ const addCustomerFormSchema = z.object({
         minLength: 19,
       })
     ),
-  workPhone: z
+  workPhone: w
     .string()
     .min(
       19,
@@ -141,7 +142,7 @@ const addCustomerFormSchema = z.object({
       })
     )
     .optional(),
-  comment: z.string().max(
+  comment: w.string().max(
     200,
     i18n.t("ns:error.message.maxLength", {
       fieldName: i18n.t("ns:field.comment"),

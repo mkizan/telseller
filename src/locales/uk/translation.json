@@ -1,52 +1,73 @@
 {
   "text": {
     "title": {
-      "referenceDirectories": "довідники",
-      "organizations": "організації",
-      "customers": "контрагенти",
-      "nomenclature": "номенклатура",
-      "documents": "документи",
-      "customerOrder": "замовлення",
-      "cashDocuments": "каса",
-      "salesTransaction": "реалізації",
-      "debts": "борги",
-      "receiptReturn": "надходження/повернення"
+      "referenceDirectories": "Довідники",
+      "organizations": "Організації",
+      "customers": "Контрагенти",
+      "nomenclature": "Номенклатура",
+      "documents": "Документи",
+      "customerOrder": "Замовлення",
+      "cashDocuments": "Каса",
+      "salesTransaction": "Реалізації",
+      "debts": "Борги",
+      "receiptReturn": "Надходження/Повернення"
     },
     "description": {},
     "status": {
-      "loading": "завантаження..."
+      "loading": "Завантаження..."
     },
     "columnTitle": {
       "org": {
-        "prefix": "префікс",
-        "name": "назва"
+        "prefix": "Префікс",
+        "name": "Назва"
       }
+    },
+    "navigation": {
+      "back": "назад"
+    },
+    "tabs": {
+      "main": "Основні",
+      "contacts": "Контакти",
+      "debts": "Взаєморозрахунки",
+      "contracts": "Договори"
     }
   },
   "homeTitle": "Дана програма була створена для мобільної торгівлі за межами офісу чи магазину",
   "button": {
-    "addCustomer": "додати контрагента"
+    "addCustomer": "Додати контрагента"
   },
   "field": {
-    "firstName": "ім'я",
-    "lastName": "прізвище",
-    "code": "ідентифікаційний код",
-    "organization": "організація",
-    "contract": "договір",
-    "debt": "заборгованість",
-    "city": "місто",
-    "street": "вулиця",
-    "build": "будинок",
-    "personalPhone": "особистий номер телефону",
-    "workPhone": "робочий номер телефону",
-    "comment": "коментар"
+    "name": "Назва",
+    "directory": "Папка",
+    "status": "Статус",
+    "firstName": "Ім'я",
+    "lastName": "Прізвище",
+    "code": "Ідентифікаційний код",
+    "organization": "Організація",
+    "contract": "Договір",
+    "debt": "Заборгованість",
+    "city": "Місто",
+    "street": "Вулиця",
+    "build": "Будинок",
+    "apartment": "Квартира",
+    "personalPhone": "Особистий номер телефону",
+    "workPhone": "Робочий номер телефону",
+    "comment": "Коментар",
+    "placeholders": {
+      "firstName": "Микола",
+      "lastName": "Круглий",
+      "contract": "Основний договір",
+      "city": "Київ",
+      "street": "Степана Бандери",
+      "comment": "Тут можна вказати коментар"
+    }
   },
   "error": {
     "message": {
       "required": "Це поле є обов'язковим",
       "minLength": "{{fieldName}} має містити принаймі {{minLength}} символи(-ів)",
       "maxLength": "{{fieldName}} не може перевищувати {{maxLength}} символів",
-      "loading": "помилка під час завантаження організацій"
+      "loading": "Помилка під час завантаження організацій"
     }
   }
 }

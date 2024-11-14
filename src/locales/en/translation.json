@@ -1,52 +1,73 @@
 {
   "text": {
     "title": {
-      "referenceDirectories": "reference directories",
-      "organizations": "organizations",
-      "customers": "customers",
-      "nomenclature": "nomenclature",
-      "documents": "documents",
-      "customerOrder": "customer order",
-      "cashDocuments": "cash documents",
-      "salesTransaction": "sales transaction",
-      "debts": "debts",
-      "receiptReturn": "receipt/return"
+      "referenceDirectories": "Reference directories",
+      "organizations": "Organizations",
+      "customers": "Customers",
+      "nomenclature": "Nomenclature",
+      "documents": "Documents",
+      "customerOrder": "Customer order",
+      "cashDocuments": "Cash documents",
+      "salesTransaction": "Sales transaction",
+      "debts": "Debts",
+      "receiptReturn": "Receipt/Return"
     },
     "description": {},
     "status": {
-      "loading": "loading..."
+      "loading": "Loading..."
     },
     "columnTitle": {
       "org": {
-        "prefix": "prefix",
-        "name": "name"
+        "prefix": "Prefix",
+        "name": "Name"
       }
+    },
+    "navigation": {
+      "back": "back"
+    },
+    "tabs": {
+      "main": "Main",
+      "contacts": "Contacts",
+      "debts": "Debts",
+      "contracts": "Contracts"
     }
   },
   "homeTitle": "This program was created for mobile commerce outside the office or store",
   "button": {
-    "addCustomer": "add customer"
+    "addCustomer": "Add customer"
   },
   "field": {
-    "firstName": "first name",
-    "lastName": "last name",
-    "code": "identification code",
-    "organization": "organization",
-    "contract": "contract",
-    "debt": "debt",
-    "city": "city",
-    "street": "street",
-    "build": "build",
-    "personalPhone": "personal phone",
-    "workPhone": "work phone",
-    "comment": "comment"
+    "name": "Name",
+    "directory": "Directory",
+    "status": "Status",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "code": "Identification code",
+    "organization": "Organization",
+    "contract": "Contract",
+    "debt": "Debt",
+    "city": "City",
+    "street": "Street",
+    "build": "Build",
+    "apartment": "apartment",
+    "personalPhone": "Personal phone",
+    "workPhone": "Work phone",
+    "comment": "Comment",
+    "placeholders": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "contract": "Main",
+      "city": "Vashington",
+      "street": "Wall Street",
+      "comment": "Here you can add some text"
+    }
   },
   "error": {
     "message": {
       "required": "This field is required",
       "minLength": "{{fieldName}} must be at least {{minLength}} characters long",
       "maxLength": "{{fieldName}} cannot exceed {{maxLength}} characters",
-      "loading": "error while loading organizations"
+      "loading": "Error while loading organizations"
     }
   }
 }

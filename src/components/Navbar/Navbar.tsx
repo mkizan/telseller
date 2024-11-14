@@ -35,7 +35,12 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="flex items-center py-4 px-6 font-[500] uppercase">
-              {t("ns:text.title.customers")}
+              <NavLink
+                to="customers"
+                onClick={() => dispatch(setToggleNavbar(!toggleNavbar))}
+              >
+                {t("ns:text.title.customers")}
+              </NavLink>
             </li>
             <li className="flex items-center py-4 px-6 font-[500] uppercase">
               {t("ns:text.title.nomenclature")}
