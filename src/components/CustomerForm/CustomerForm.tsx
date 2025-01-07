@@ -30,6 +30,7 @@ const CustomerForm = () => {
   const onSubmit = (data: TCustomerData) => {
     addCustomer(data);
     reset();
+    console.log(data);
   };
 
   return (
@@ -91,7 +92,7 @@ const CustomerForm = () => {
           {t("ns:field.code")}
         </label>
         <input
-          {...(register("code"), { required: false })}
+          {...register("code", { required: false })}
           type="number"
           id="code"
           placeholder="1234567890"
@@ -179,7 +180,7 @@ const CustomerForm = () => {
           {t("ns:field.street")}
         </label>
         <input
-          {...(register("street"), { required: true })}
+          {...register("street", { required: true })}
           type="text"
           id="street"
           placeholder={t("ns:field.placeholders.street")}
@@ -197,7 +198,7 @@ const CustomerForm = () => {
           {t("ns:field.build")}
         </label>
         <input
-          {...(register("build"), { required: true })}
+          {...register("build", { required: true })}
           type="number"
           id="build"
           placeholder="4"
@@ -245,8 +246,10 @@ const CustomerForm = () => {
           {t("ns:field.workPhone")}
         </label>
         <input
-          {...(registerWithMask("workPhone", "+38 (999) 999-99-99"),
-          { required: false })}
+          {...registerWithMask("workPhone", "+38 (999) 999-99-99", {
+            required: false,
+          })}
+          id="workPhone"
           type="tel"
           inputMode="numeric"
           placeholder="+38 (999) 999-99-99"

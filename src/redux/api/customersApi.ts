@@ -42,7 +42,7 @@ export const customersApi = createApi({
   tagTypes: ["customers"],
   endpoints: (builder) => ({
     getCustomers: builder.query<TCustomerData[], void>({
-      query: () => ({ url: "/customers" }),
+      query: () => ({ url: "/customers", method: "GET" }),
       providesTags: ["customers"],
     }),
     getOneCustomer: builder.query<TCustomerData, number>({

@@ -34,7 +34,9 @@
   },
   "homeTitle": "This program was created for mobile commerce outside the office or store",
   "button": {
-    "addCustomer": "Add customer"
+    "addCustomer": "Add",
+    "editCustomer": "Edit",
+    "deleteCustomer": "Delete"
   },
   "field": {
     "name": "Name",
