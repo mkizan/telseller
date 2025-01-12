@@ -46,7 +46,7 @@ export const customersApi = createApi({
       providesTags: ["customers"],
     }),
     getOneCustomer: builder.query<TCustomerData, number>({
-      query: (id) => ({ url: `/customer/:${id}` }),
+      query: (id) => ({ url: `/customer/${id}`, method: "GET" }),
       providesTags: ["customers"],
     }),
     addCustomer: builder.mutation<TCustomerData, TNewCustomer>({
@@ -54,6 +54,17 @@ export const customersApi = createApi({
         url: "/customers",
         method: "POST",
         body: newCustomer,
+      }),
+      invalidatesTags: ["customers"],
+    }),
+    editCustomer: builder.mutation<
+      void,
+      Partial<TNewCustomer> & { id: number | string }
+    >({
+      query: ({ id, ...data }) => ({
+        url: `/customers/${id}`,
+        method: "PATCH",
+        body: data,
       }),
       invalidatesTags: ["customers"],
     }),
@@ -71,5 +82,6 @@ export const {
   useGetCustomersQuery,
   useGetOneCustomerQuery,
   useAddCustomerMutation,
+  useEditCustomerMutation,
   useDeleteCustomerMutation,
 } = customersApi;
